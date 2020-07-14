@@ -42,7 +42,6 @@ public class Main {
     hamburger.yourAddition("cetriolo", 2);
     hamburger.yourAddition("sottiletta", 3);
     hamburger.yourAddition("sottiletta", 3);
-
     // segue scelta finale
     hamburger.yourHamburger();
 

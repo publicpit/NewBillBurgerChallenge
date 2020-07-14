@@ -45,8 +45,8 @@ public class Hamburger {
   }
 
   // controlla il numero di aggiunte e la compatibilità con i vincoli dettati dall'esercizio.
-  // Inoltr setta le stringhe che servono al metodo yourHamburger()
-  public void yourAddition(String otherIngredient, int priceIngredient) {
+
+  public void yourAddition(String otherIngredient, double priceIngredient) {
     this.priceIngredient = priceIngredient;
     this.totalAdditionPrice += priceIngredient;
     countAddition++;
@@ -62,15 +62,5 @@ public class Hamburger {
 
   public void grandTotal() {
     System.out.println("Total price of your meal is: " + (totalAdditionPrice + basePrice));
-  }
-
-  public double getTotalAdditionPrice() {
-    return this.totalAdditionPrice;
-  }
-
-  // seguono i vari getter
-
-  public double getBasePrice() {
-    return this.basePrice;
   }
 }
