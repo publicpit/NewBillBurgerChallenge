@@ -3,14 +3,14 @@ package org.paolo;
 public class DeluxeBurger extends Hamburger {
   private boolean chips;
   private boolean drink;
-  private int chipsPrice;
-  private int drinkPrice;
+  private double chipsPrice;
+  private double drinkPrice;
 
   // i boolean non servono ma li ho messi perchè in un app effettiva intuitivamente immagino
   // possano servire come flag
 
-  public DeluxeBurger(String breadRoll, String meat, String name, int basePrice) {
-    super(breadRoll, meat, name, basePrice);
+  public DeluxeBurger() {
+    super("White", "Sausage", "Deluxe", 14.5);
     this.chips = true;
     this.drink = true;
     this.drinkPrice = 10;
@@ -19,7 +19,7 @@ public class DeluxeBurger extends Hamburger {
 
   public void yourMeal() {
     System.out.println(
-        "This is deluxe hamburger meal  and it come with chips and drink.(see their price at the bottom)");
+        "This is deluxe hamburger meal and it come with chips and drink.(see their price at the bottom)");
   }
 
   @Override
@@ -35,13 +35,5 @@ public class DeluxeBurger extends Hamburger {
             + (chipsPrice + drinkPrice)
             + "\nTotal price of your meal is: "
             + (getTotalAdditionPrice() + getBasePrice() + chipsPrice + drinkPrice));
-  }
-
-  public int getChipsPrice() {
-    return chipsPrice;
-  }
-
-  public int getDrinkPrice() {
-    return drinkPrice;
   }
 }
